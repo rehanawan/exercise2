@@ -10,8 +10,9 @@ class TodoForm extends React.Component {
     }
 
     onFormSubmit(event) {
+        debugger;
         event.preventDefault();
-        this.props.createTodo(this.state.todoName);
+        this.props.onSubmitCallback(this.state.todoName);
         this.setState({todoName: ""});
     }
 
@@ -23,9 +24,9 @@ class TodoForm extends React.Component {
     render() {
         return(
             <form onSubmit={this.onFormSubmit.bind(this)}>
-                <input 
-                    type="text" 
-                    value={this.state.todoName} 
+                <input
+                    type="text"
+                    value={this.state.todoName}
                     onChange={this.onInputChange.bind(this)} />
                 <button type="submit">Add Task</button>
             </form>

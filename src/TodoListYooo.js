@@ -3,14 +3,14 @@ import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import './App.css';
 
-class App extends React.Component {
+class TodoListYooo extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
       todos: []
     }
-    this.toggleTodo = this.toggleTodo.bind(this);
+
     this.createTodo = this.createTodo.bind(this);
   }
 
@@ -51,7 +51,7 @@ class App extends React.Component {
         body: JSON.stringify(todo)
     })
         .then(resp => resp.json())
-        .then(result => { 
+        .then(result => {
           const updatedList = this.state.todos.map(todo => {
             if (todo.id === result.id)
               return result;
@@ -63,11 +63,12 @@ class App extends React.Component {
   };
 
   createTodo(todoName) {
+      debugger;
     const newTodo = {name: todoName, isComplete: false};
     this.saveTodo(newTodo);
   }
 
-  toggleTodo(todoId) {
+  toggleTodo = (todoId) => {
     const todo = this.state.todos.find((t) => {
       return t.id === todoId;
     });
@@ -77,17 +78,20 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="todo-app">
-        <h1>TODO LIST:</h1>
-        <div className="status"></div>
-        <TodoForm createTodo={this.createTodo}/>
-        <TodoList 
-          list={this.state.todos} 
-          toggleTodo={this.toggleTodo}
-        />
-      </div>
+        <div>
+          <div>Hello</div>
+          <div className="todo-app">
+            <h1>{ this.props.headerText }</h1>
+            <div className="status"></div>
+            <TodoForm onSubmitCallback={this.createTodo}/>
+            <TodoList
+              list={this.state.todos}
+              toggleTodo={this.toggleTodo}
+            />
+          </div>
+        </div>
     );
   }
 }
 
-export default App;
+export default TodoListYooo;
