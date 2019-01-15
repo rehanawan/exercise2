@@ -3,12 +3,12 @@
     {
       "id": 1,
       "name": "Buy milk",
-      "isComplete": true
+      "isComplete": false
     },
     {
       "id": 2,
       "name": "Call mom",
-      "isComplete": true
+      "isComplete": false
     }
   ],
   "contacts": [

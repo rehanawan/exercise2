@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
+import Tools from './Tools';
 
-const TodoItem = (props) => (
-    <li>
-        <input 
-            checked={ props.isComplete }
-            onChange={ () => props.toggleTodo(props.id) }
-            type="checkbox"/> { props.name }
-    </li>
-);
+const TodoItem = (props) => {
+    const onClickHandler = (event) => {
+        event.preventDefault();
+        props.toggleTodo(props.id);
+    }
+
+    return (
+        <li onClick={ onClickHandler }>
+            <input 
+                checked={ props.isComplete }
+                onChange={() => {}}
+                type="checkbox"/> { props.name }
+            <Tools />
+        </li>
+    )
+}
 
 class TodoList extends Component {
 

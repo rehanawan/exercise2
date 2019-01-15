@@ -63,7 +63,6 @@ class TodoListYooo extends React.Component {
   };
 
   createTodo(todoName) {
-      debugger;
     const newTodo = {name: todoName, isComplete: false};
     this.saveTodo(newTodo);
   }
@@ -79,7 +78,6 @@ class TodoListYooo extends React.Component {
   render() {
     return (
         <div>
-          <div>Hello</div>
           <div className="todo-app">
             <h1>{ this.props.headerText }</h1>
             <div className="status"></div>

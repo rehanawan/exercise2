@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import TodoListYooo from './TodoListYooo';
+import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const root = document.getElementById('root')
 ReactDOM.render(
-    <TodoListYooo
-        headerText="My Todo List 2019" />,
+    <App headerText="My Todo List 2019" />,
     root);
 
 serviceWorker.unregister();

@@ -39,6 +39,31 @@ button {
 .todo-list li {
   font-size: 1.2rem;
   list-style: none;
+  border-radius: 5px;
+  border: 1px solid #dadada;
+  padding: 4px 8px;
+  margin-bottom: 4px;
+  cursor: pointer;
+} 
+
+.todo-list li:hover {
+  background: #f1f1f1;
+}
+
+.more {
+  float: right;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  border-radius: 25%;
+  padding: 2px;
+}
+
+.more::before {
+  content: "...";
+}
+
+.more:hover {
+  background-color: #DBFFF1;
 }
 
 .message {
