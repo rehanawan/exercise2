@@ -1,21 +1,5 @@
 import React, { Component } from 'react';
-
-const Info = (props) => {
-    const onClickHandler = (event) => {
-        event.preventDefault();
-        props.toggleTodo(props.id);
-    }
-
-    return (
-        <li onClick={ onClickHandler }>
-            <input 
-                checked={ props.isComplete }
-                onChange={() => {}}
-                type="checkbox"/> { props.name }
-            <Tools />
-        </li>
-    )
-}
+import Info from "./Info";
 
 class Contacts extends Component {
 
@@ -24,8 +8,13 @@ class Contacts extends Component {
             <div className="contacts">
                 { this.props.contacts.map((contact, index) => (
                     <Info 
-                        key={ index } 
-                        { ...contact } /> 
+                        key={index} 
+                        id={contact.id} 
+                        name={contact.name}
+                        phone={contact.phoneNumber}
+                        avatar={contact.avatar} 
+                        onContactClick={this.props.onContactClick}
+                        /> 
                     )) 
                 }
             </div>
