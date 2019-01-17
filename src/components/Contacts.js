@@ -8,8 +8,13 @@ class Contacts extends Component {
             <div className="contacts">
                 { this.props.contacts.map((contact, index) => (
                     <Info 
-                        key={ index } 
-                        { ...contact } /> 
+                        key={index} 
+                        id={contact.id} 
+                        name={contact.name}
+                        phone={contact.phoneNumber}
+                        avatar={contact.avatar} 
+                        onContactClick={this.props.onContactClick}
+                        /> 
                     )) 
                 }
             </div>
