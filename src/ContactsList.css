@@ -71,22 +71,53 @@
 }
 
 .content {
-  padding: 2px 16px;
+  padding: 32px;
+  height: 320px;
+  width: 100%;
+  display: relative;
+  text-align: right;
 }
 
-.content > label {
-  clear: both;
-} 
+.content > div {
+  width: 100%;
+  margin: 8px 0;
+}
 
 
-.contact-card .avatar {
-  width: 96px;
-  height: 96px;
+.content > div > span:first-child {
+  float: left;
+  font-size: 1rem;
+  font-style: oblique;
+}
+
+.content > div > span:nth-child(2) {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.contact-card > .avatar {
+  width: 128px;
+  height: 128px;
+  margin-left: 32px;
   align-self: flex-start;
 }
 
-.contact-card > a {
-  justify-self: flex-end;
+.back-btn {
+  text-align: center;
+  width: 54px;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: #cad0d1;
+}
+
+.divide {
+  padding-bottom: 12px;
+  border-bottom: 2px inset #cad0d1;
 }
 
 .message {

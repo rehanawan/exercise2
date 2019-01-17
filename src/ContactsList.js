@@ -8,8 +8,8 @@ class ContactsList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayContact: null,
-      contacts: []
+      contacts: [],
+      displayContact: null
     }
   }
 
@@ -30,16 +30,27 @@ class ContactsList extends React.Component {
     this.setState({displayContact: contactClicked});
   }
 
+  onBackClick = () => {
+    this.setState({displayContact: null});
+  }
+
   render() {
     return (
         <div className="contacts-app">
-          <div className="title">{ this.props.headerText }</div>
+          <div className="title">{ this.state.displayContact 
+              ? this.state.displayContact.name
+              : this.props.headerText
+            }
+          </div>
           { this.state.displayContact 
-            ? <ContactCard details={this.state.displayContact} />
+            ? <ContactCard 
+                details={this.state.displayContact} 
+                onBackClick={this.onBackClick}
+              />
             : <Contacts 
                 contacts={this.state.contacts} 
                 onContactClick={this.onContactClickHandler}
-                />
+              />
           }
         </div>
     );

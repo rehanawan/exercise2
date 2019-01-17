@@ -6,14 +6,29 @@ class ContactCard extends React.Component {
         return(
             <div className="contact-card">
                 <img className="avatar" src={this.props.details.avatar} alt="Profile"/>
-                <span className="content">
-                    <label>Name: </label><div>{this.props.details.name}</div>
-                    <label>Phone: </label><div>{this.props.details.phoneNumber}</div>
-                    <label>Address: </label><div>{this.props.details.address}</div>
-                    <label>City: </label><div>{this.props.details.city}</div>
-                    <label>Description: </label> <div>{this.props.details.description}</div>
-                </span>
-                <a href="/">Back</a>
+                <div className="content">
+                    <div>
+                        <span>Name:</span>
+                        <span>{this.props.details.name}</span>
+                    </div>
+                    <div className="divide">
+                        <span>Phone:</span>
+                        <span>{this.props.details.phoneNumber}</span>
+                    </div>
+                    <div>
+                        <span>Address:</span>
+                        <span>{this.props.details.address}</span>
+                    </div>
+                    <div className="divide">
+                        <span>City:</span>
+                        <span>{this.props.details.city}</span>
+                    </div>
+                    <div>
+                        <span>About:</span>
+                        <span>{this.props.details.description}</span>
+                    </div>
+                </div>
+                <div className="back-btn" onClick={this.props.onBackClick}>Back</div>
             </div>
         )
     }
