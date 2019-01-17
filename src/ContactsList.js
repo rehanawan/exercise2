@@ -1,5 +1,6 @@
 import React from 'react';
 import Contacts from './components/Contacts';
+import ContactCard from './components/ContactCard';
 import './ContactsList.css';
 
 class ContactsList extends React.Component {
@@ -34,7 +35,7 @@ class ContactsList extends React.Component {
         <div className="contacts-app">
           <div className="title">{ this.props.headerText }</div>
           { this.state.displayContact 
-            ? <div />
+            ? <ContactCard details={this.state.displayContact} />
             : <Contacts 
                 contacts={this.state.contacts} 
                 onContactClick={this.onContactClickHandler}

@@ -9,7 +9,7 @@ const Info = (props) => {
 
     return (
         <div className="info" onClick={clickHandler} >
-            <img className="avatar" src={props.avatar} alt="Profile"/>
+            <img className="avatar" src={props.avatar} alt="Avatar"/>
             <span className="details">
                 <div>{props.name}</div>
                 <div>{props.phone}</div>

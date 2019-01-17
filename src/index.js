@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 
 const root = document.getElementById('root')
 ReactDOM.render(
-    <ContactsList headerText="Contacts List" />,
+    <ContactsList headerText="CONTACTS LIST" />,
     root);
 
 serviceWorker.unregister();
