@@ -1,9 +1,8 @@
 import React from 'react';
-import TodoForm from './components/TodoForm';
-import TodoList from './components/TodoList';
-import './App.css';
+import Contacts from './components/Contacts';
+import './ContactsList.css';
 
-class TodoListYooo extends React.Component {
+class ContactsList extends React.Component {
 
   constructor(props) {
     super(props);
@@ -26,18 +25,16 @@ class TodoListYooo extends React.Component {
   render() {
     return (
         <div>
-          <div className="todo-app">
+          <div className="contacts-app">
             <h1>{ this.props.headerText }</h1>
-            <div className="status"></div>
-            <TodoForm onSubmitCallback={this.createTodo}/>
-            <TodoList
-              list={this.state.todos}
-              toggleTodo={this.toggleTodo}
-            />
+            { this.state.displayContact 
+              ? <div />
+              : <Contacts contacts={this.state.contacts} />
+            }
           </div>
         </div>
     );
   }
 }
 
-export default TodoListYooo;
+export default ContactsList;
