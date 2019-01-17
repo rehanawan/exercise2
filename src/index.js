@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 
 const root = document.getElementById('root')
 ReactDOM.render(
-    <App headerText="My Todo List 2019" />,
+    <App headerText="Contacts List" />,
     root);
 
 serviceWorker.unregister();
