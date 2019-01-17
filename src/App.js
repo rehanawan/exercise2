@@ -1,6 +1,6 @@
 import React from 'react';
 import TodoForm from './components/TodoForm';
-import TodoList from './components/TodoList';
+import Contacts from './components/Contacts';
 import './App.css';
 
 class TodoListYooo extends React.Component {
@@ -26,14 +26,12 @@ class TodoListYooo extends React.Component {
   render() {
     return (
         <div>
-          <div className="todo-app">
+          <div className="contacts-app">
             <h1>{ this.props.headerText }</h1>
-            <div className="status"></div>
-            <TodoForm onSubmitCallback={this.createTodo}/>
-            <TodoList
-              list={this.state.todos}
-              toggleTodo={this.toggleTodo}
-            />
+            { this.state.displayContact 
+              ? <ContactDetails contact={} />
+              : <Contacts contacts={contacts} />
+            }
           </div>
         </div>
     );
