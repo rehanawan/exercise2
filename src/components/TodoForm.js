@@ -1,36 +1,40 @@
-import React from 'react';
+import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import { updateInput } from '../actions';
+import { saveTodo } from '../reducers/todoReducer';
 
-class TodoForm extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            todoName: ""
-        }
-    }
-
-    onFormSubmit(event) {
+class TodoForm extends Component {
+    onSubmit = (event) => {
         event.preventDefault();
-        this.props.createTodo(this.state.todoName);
-        this.setState({todoName: ""});
-    }
-
-    onInputChange(event) {
-        const value = event.target.value;
-        this.setState({todoName: value});
+        this.props.saveTodo(this.props.currentTodo);
     }
 
     render() {
         return(
-            <form onSubmit={this.onFormSubmit.bind(this)}>
+            <form onSubmit={this.onSubmit}>
                 <input 
                     type="text" 
-                    value={this.state.todoName} 
-                    onChange={this.onInputChange.bind(this)} />
+                    value={this.props.currentTodo} 
+                    onChange={ (event) => { this.props.updateInput(event.target.value) } } />
                 <button type="submit">Add Task</button>
             </form>
         )
     }
 }
 
-export default TodoForm;
+const mapStateToProps = state => {
+    return {
+        currentTodo: state.currentTodo
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        updateInput: (val) => dispatch(updateInput(val)) 
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(TodoForm)

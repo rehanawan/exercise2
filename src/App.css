@@ -39,6 +39,10 @@ button {
 .todo-list li {
   font-size: 1.2rem;
   list-style: none;
+  border: 1px solid #999999;
+  border-radius: 4px;
+  padding: 4px;
+  margin-bottom: 4px;
 }
 
 .message {

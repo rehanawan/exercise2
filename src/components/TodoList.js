@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { fetchTodos, toggleTodo } from '../reducers/todoReducer';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types'
 
 const TodoItem = (props) => (
     <li>
@@ -10,12 +13,14 @@ const TodoItem = (props) => (
 );
 
 class TodoList extends Component {
-
+    componentDidMount() {
+        this.props.fetchTodos();
+    }
     render() {
         return (
             <div className="todo-list">
                 <ul>
-                    { this.props.list.map(todo => 
+                    { this.props.todos.map(todo => 
                         <TodoItem 
                             key={ todo.id } 
                             toggleTodo={ this.props.toggleTodo } 
@@ -28,4 +33,19 @@ class TodoList extends Component {
     } 
 }
 
-export default TodoList;
+//  prop types
+TodoList.propTypes = {
+    todos: PropTypes.array.isRequired,
+    toggleTodo: PropTypes.func.isRequired,
+}
+
+const mapStateToProps = state => {
+    return {
+        todos: state.todos
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    { fetchTodos, toggleTodo }
+)(TodoList)
