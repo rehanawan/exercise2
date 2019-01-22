@@ -18,7 +18,7 @@ class ContactsList extends React.Component {
   }
 
   getContacts() {
-    fetch('http://localhost:8686/people')
+    fetch('https://voogie.glitch.me/contacts')
         .then(resp => resp.json())
         .then(results => this.setState({contacts: results}));
   };
