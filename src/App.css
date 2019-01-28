@@ -1,13 +1,26 @@
 * {
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+} 
+
 .todo-app {
+  min-width: 600px;
+  margin-top: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+form {
+  width: 100%;
 }
 
 input[type="text"] {
@@ -33,7 +46,7 @@ button {
 }
 
 .todo-list {
-  min-width: 40%;
+  min-width: 90%;
 }
 
 .todo-list li {
@@ -41,8 +54,13 @@ button {
   list-style: none;
   border: 1px solid #999999;
   border-radius: 4px;
-  padding: 4px;
-  margin-bottom: 4px;
+  padding: 8px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.todo-list li:first-child {
+  margin-top: 2rem;
 }
 
 .message {

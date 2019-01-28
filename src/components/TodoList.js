@@ -4,10 +4,9 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types'
 
 const TodoItem = (props) => (
-    <li>
+    <li onClick={() => props.toggleTodo(props.id)} >
         <input 
             checked={ props.isComplete }
-            onChange={ () => props.toggleTodo(props.id) }
             type="checkbox"/> { props.name }
     </li>
 );
@@ -16,12 +15,13 @@ class TodoList extends Component {
     componentDidMount() {
         this.props.fetchTodos();
     }
+
     render() {
         return (
             <div className="todo-list">
                 <ul>
                     { this.props.todos.map(todo => 
-                        <TodoItem 
+                        <TodoItem
                             key={ todo.id } 
                             toggleTodo={ this.props.toggleTodo } 
                             { ...todo } /> 
