@@ -1,68 +1,45 @@
-This project was bootstrapped with [Create React TodoListYooo](https://github.com/facebook/create-react-app).
+# Exercise 2: Make Todo List Great Again!
+Howdy, guys! In this task you are challenged to used some _redux_ knowledge you have. I suggest you to go through the basic parts of _redux_ way of doing things, what are actions actions and what happens when you dispatch them, what are reducers and how to connect _redux_ store to your project. 
 
-## Available Scripts
+The project that we used to work on is broken into pieces again, however I scattered some comments in the every code so pay attention 👀 
 
-In the project directory, you can run:
+### *NOTE1*: In this task we local use _dev-server_ and I believe you are already know how to rig it up. Styles and class names are provided so you don't need to design anything, but keep in mind if you wish to add something on your own, feel free to do so 🎉🎉🎉
+
+#### *NOTE2*: You are starting with an App already being connected to redux store and even though _thunk_ and _dev tools_ are supported of the box, check out the way it is done. If you will have any questions, do not hesitate to ask.
+
+#### *NOTE3*: Avoid switching to `master` branch, since it contains working example of the project.
+
+#### HAPPY HACKING! 🙌
+
+## What you need to achieve
+This is how the app was looking before I messed everything up again :very_sad_emoji: ...
+
+*Todo list now have a filter options with tree different options:*
+#### Display All Tasks  
+![ Display All Tasks](https://raw.githubusercontent.com/voogieJames/react-101/exercise2/snapshots/snap1.png)
+Shows all the tasks both _completed_ and _active_. 
+
+#### Completed Tasks 
+![ Display Completed Tasks](https://raw.githubusercontent.com/voogieJames/react-101/exercise2/snapshots/snap2.png)
+Displays _completed_ tasks only. 
+
+
+#### Active Tasks 
+![ Display Active Tasks](https://raw.githubusercontent.com/voogieJames/react-101/exercise2/snapshots/snap3.png)
+Displays _active_ tasks only. 
+
+## Available setup
+
+After cloning the repo you need to start npm project, meaning, download all dependencies(`npm install`) and then you can run following scripts:
 
 ### `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### server or dev-server
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React TodoListYooo documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web TodoListYooo
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Contacts list app is fetching data from the glitch server app here: [https://voogie.glitch.me/contacts](https://voogie.glitch.me/contacts)
+If by some reason data isn't available, I encourage you to use local *dev-server*
+To start local *dev-server* run `npm run dev-server` from the project root folder and make sure that in your application
+you're using the following URL: *http://localhost:8686/people*.
