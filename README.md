@@ -11,7 +11,15 @@ The project that we used to work on is broken into pieces again, however I scatt
 
 #### HAPPY HACKING! 🙌
 
-## What you need to achieve
+## What you need to do
+  * Make Todo filter work as it's displayed on the screeshots below:
+   * Tasks should be filtered
+   * Active filter button should be noticeable 
+  * Adding new tasks should work as expected
+  * Fix app messages so they are showing proper message and are disappearing after some time (you can add more styling, animation and different color for different statuses) - _NOTE_: How to do this task is absolutely up to you
+  * _EXTRA TASK:_ _Delete_ and or _Edit_ tasks. I haven't implemented that part at all, so adding these functionalities into the project will make you sweat a bit, but I ensure you will have a better understanding of how things work in this pattern and will get a good experience. 
+  
+
 This is how the app was looking before I messed everything up again :very_sad_emoji: ...
 
 *Todo list now have a filter options with tree different options:*
@@ -26,10 +34,6 @@ This is how the app was looking before I messed everything up again :very_sad_em
 #### Active Tasks 
 ![ Display Active Tasks](https://raw.githubusercontent.com/voogieJames/react-101/exercise2/snapshots/snap3.png)
 
-
-## Things we need to do:
-  * Aaa
-  * Bbbb
 
 ## Available setup
 
