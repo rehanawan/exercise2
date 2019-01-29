@@ -1,7 +1,7 @@
 # Exercise 2: Make Todo List Great Again!
-Howdy, guys! In this task you are challenged to used some _redux_ knowledge you have gained so far. I suggest you to go through the basic parts of _redux_ way of doing things, what are actions actions and what happens when you dispatch them, what are reducers and how to connect _redux_ store to your project. 
+Howdy, guys! In this task you are challenged to used some _redux_ knowledge you have gained so far. I suggest you to go through the basic parts of _redux_ way of doing things to refresh your knowledge and be comfortable with actions and what happens when you dispatch them, what are reducers and how to connect _redux_ store to your project. 
 
-The project that we used to work on is broken into pieces again, however I scattered some comments in the every code so pay attention 👀 
+The project that we worked on is broken into pieces again, however I scattered some comments in the every code so pay attention 👀 
 
 ### *NOTE1*: In this task we local use _dev-server_ and I believe you are already know how to rig it up. Styles and class names are provided so you don't need to design anything, but keep in mind if you wish to add something on your own, feel free to do so 🎉🎉🎉
 
