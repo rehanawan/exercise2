@@ -9,16 +9,15 @@ The project that we used to work on is broken into pieces again, however I scatt
 
 #### *NOTE3*: Avoid switching to `master` branch, since it contains working example of the project.
 
-#### HAPPY HACKING! 🙌
-
 ## What you need to do
   * Make Todo filter work as it's displayed on the screeshots below:
    * Tasks should be filtered
    * Active filter button should be noticeable 
   * Adding new tasks should work as expected
   * Fix app messages so they are showing proper message and are disappearing after some time (you can add more styling, animation and different color for different statuses) - _NOTE_: How to do this task is absolutely up to you
-  * _EXTRA TASK:_ _Delete_ and or _Edit_ tasks. I haven't implemented that part at all, so adding these functionalities into the project will make you sweat a bit, but I ensure you will have a better understanding of how things work in this pattern and will get a good experience. 
-  
+  * _EXTRA TASK:_ _Delete_ and or _Edit_ tasks. This task is *optional* and I haven't implemented that part at all, so adding these functionalities into the project will make you sweat a bit, but I ensure you will have a better understanding of how things work in this pattern and will get a good experience. 
+
+#### HAPPY HACKING! 🙌
 
 This is how the app was looking before I messed everything up again :very_sad_emoji: ...
 
@@ -40,13 +39,10 @@ This is how the app was looking before I messed everything up again :very_sad_em
 After cloning the repo you need to start npm project, meaning, download all dependencies(`npm install`) and then you can run following scripts:
 
 ### `npm start`
-
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### server or dev-server
+### `npm run dev-server`
+Starts local *dev-server* run on the port `8686`.
 
-Contacts list app is fetching data from the glitch server app here: [https://voogie.glitch.me/contacts](https://voogie.glitch.me/contacts)
-If by some reason data isn't available, I encourage you to use local *dev-server*
-To start local *dev-server* run `npm run dev-server` from the project root folder and make sure that in your application
-you're using the following URL: *http://localhost:8686/people*.
+
