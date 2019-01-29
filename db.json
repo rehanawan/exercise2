@@ -32,13 +32,18 @@
     },
     {
       "name": "Brush my teeth",
-      "isComplete": false,
+      "isComplete": true,
       "id": 7
     },
     {
       "name": "Make a dinner",
       "isComplete": false,
       "id": 8
+    },
+    {
+      "name": "Plant a tree",
+      "isComplete": false,
+      "id": 9
     }
   ]
 }

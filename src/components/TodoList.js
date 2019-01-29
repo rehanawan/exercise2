@@ -28,6 +28,7 @@ class TodoList extends Component {
                 && task.isComplete === true) {
                 return task;
             }
+            return null;
         });
             
         return filtered;

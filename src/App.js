@@ -11,7 +11,6 @@ class App extends React.Component {
     return (
       <div className="todo-app">
         <h1>TODO LIST:</h1>
-
         <Message />
         <TodoForm />
         <Controls />
