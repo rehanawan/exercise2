@@ -11,8 +11,8 @@ The project that we worked on is broken into pieces again, however I scattered s
 
 ## What you need to do
   * Make Todo filter work as it's displayed on the screeshots below:
-   - Tasks should be filtered
-   - Active filter button should be noticeable 
+    * Tasks should be filtered based on filter selected
+    * Selected filter button should be highlighted
   * Adding new tasks should work as expected
   * Fix app messages so they are showing proper message and are disappearing after some time (you can add more styling, animation and different color for different statuses) - _NOTE_: How to do this task is absolutely up to you
   * _EXTRA TASK:_ _Delete_ and or _Edit_ tasks. This task is *optional* and I haven't implemented that part at all, so adding these functionalities into the project will make you sweat a bit, but I ensure you will have a better understanding of how things work in this pattern and will get a good experience. 
