@@ -17,16 +17,19 @@ This is how the app was looking before I messed everything up again :very_sad_em
 *Todo list now have a filter options with tree different options:*
 #### Display All Tasks  
 ![ Display All Tasks](https://raw.githubusercontent.com/voogieJames/react-101/exercise2/snapshots/snap1.png)
-Shows all the tasks both _completed_ and _active_. 
+
 
 #### Completed Tasks 
 ![ Display Completed Tasks](https://raw.githubusercontent.com/voogieJames/react-101/exercise2/snapshots/snap2.png)
-Displays _completed_ tasks only. 
 
 
 #### Active Tasks 
 ![ Display Active Tasks](https://raw.githubusercontent.com/voogieJames/react-101/exercise2/snapshots/snap3.png)
-Displays _active_ tasks only. 
+
+
+## Things we need to do:
+  * Aaa
+  * Bbbb
 
 ## Available setup
 
