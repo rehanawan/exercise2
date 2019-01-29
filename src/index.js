@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import ContactsList from './ContactsList';
+import { Provider } from 'react-redux';
+import App from './App';
 import * as serviceWorker from './serviceWorker';
+import store from './store';
 
-const root = document.getElementById('root')
 ReactDOM.render(
-    <ContactsList headerText="CONTACTS LIST" />,
-    root);
+    <Provider store={store} >
+        <App />
+    </Provider>, document.getElementById('root'));
 
 serviceWorker.unregister();
