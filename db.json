@@ -44,6 +44,11 @@
       "name": "Plant a tree",
       "isComplete": false,
       "id": 9
+    },
+    {
+      "name": "Run a marathon",
+      "isComplete": false,
+      "id": 10
     }
   ]
 }

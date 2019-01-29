@@ -9,7 +9,7 @@ const initState = {
     currentTodo: '',
     todos: [],
     message: 'Initiated',
-    visibilityFilter: VISIBILITY_FILTERS.SHOW_ACTIVE
+    visibilityFilter: VISIBILITY_FILTERS.SHOW_ALL
 }
 
 //
