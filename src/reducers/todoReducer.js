@@ -9,7 +9,7 @@ const initState = {
     currentTodo: '',
     todos: [],
     message: 'Initiated',
-    visibilityFilter: VISIBILITY_FILTERS.SHOW_ALL
+    visibilityFilter: VISIBILITY_FILTERS.SHOW_ACTIVE
 }
 
 //
@@ -21,10 +21,14 @@ export const fetchTodos = () => {
     }
 } 
 
-export const saveTodo = (name) => {
+export const saveTodo = (taskName) => {
     return (dispatch) => {
         dispatch(showMessage('Saving Todo ... '))
-        createTodo(name)
+        const newTodo = {
+            name: taskName,
+            isComplete: false
+        }
+        createTodo(newTodo)
             .then(res => dispatch(addTodo(res)))
     }
 }

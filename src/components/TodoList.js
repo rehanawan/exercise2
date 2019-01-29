@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import { fetchTodos, toggleTodo } from '../reducers/todoReducer';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types'
+import { VISIBILITY_FILTERS } from '../actions';
 
 const TodoItem = (props) => (
     <li onClick={() => props.toggleTodo(props.id)} >
-        <input 
-            checked={ props.isComplete }
-            type="checkbox"/> { props.name }
+        <p className={props.isComplete ? "task completed" : "task"}>{props.name}</p>
     </li>
 );
 
@@ -16,17 +15,41 @@ class TodoList extends Component {
         this.props.fetchTodos();
     }
 
+    filterTasks = (tasks, filterOption) => {
+        const filtered = this.props.todos.filter(task => {
+            if (filterOption === VISIBILITY_FILTERS.SHOW_ALL) {
+                return task;
+            }
+            if (filterOption === VISIBILITY_FILTERS.SHOW_ACTIVE 
+                && task.isComplete === false) {
+                return task;
+            }
+            if (filterOption === VISIBILITY_FILTERS.SHOW_COMPLETED 
+                && task.isComplete === true) {
+                return task;
+            }
+        });
+            
+        return filtered;
+    }
+
+    listTasks = (filteredTodos) => {
+        const taskList = filteredTodos.map(todo => 
+            <TodoItem
+                key={ todo.id } 
+                toggleTodo={ this.props.toggleTodo } 
+                { ...todo } /> 
+        );
+        return taskList;
+    }
+
     render() {
+        const { todos, visibilityFilter } = this.props;
+        const filteredTodos = this.filterTasks(todos, visibilityFilter);
         return (
             <div className="todo-list">
                 <ul>
-                    { this.props.todos.map(todo => 
-                        <TodoItem
-                            key={ todo.id } 
-                            toggleTodo={ this.props.toggleTodo } 
-                            { ...todo } /> 
-                        ) 
-                    }
+                    { this.listTasks(filteredTodos) }
                 </ul>
             </div>
         )
@@ -41,7 +64,8 @@ TodoList.propTypes = {
 
 const mapStateToProps = state => {
     return {
-        todos: state.todos
+        todos: state.todos,
+        visibilityFilter: state.visibilityFilter
     }
 }
 

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Buy milk",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": 2,
@@ -19,6 +19,26 @@
       "name": "Shave my cat",
       "isComplete": true,
       "id": 4
+    },
+    {
+      "name": "New task",
+      "isComplete": true,
+      "id": 5
+    },
+    {
+      "name": "Go for a walk",
+      "isComplete": false,
+      "id": 6
+    },
+    {
+      "name": "Brush my teeth",
+      "isComplete": false,
+      "id": 7
+    },
+    {
+      "name": "Make a dinner",
+      "isComplete": false,
+      "id": 8
     }
   ]
 }

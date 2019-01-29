@@ -34,15 +34,35 @@ input[type="text"] {
 }
 
 button {
-  float: right;
-  background-color: #4CAF50;
-  color: white;
   font-size: 1rem;
   height: 32px;
-  margin-bottom: 8px; 
   padding: 0 8px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+button[type=submit] {
+  float: right;
+  background-color: #4CAF50;
+  color: white;
+  margin-bottom: 8px; 
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  margin-top: 1.6rem;
+  justify-content: space-around;
+}
+
+.control-btn {
+  background-color: #cacaca;
+  color: #888888;
+}
+
+.control-btn.active {
+  background-color: #666666;
+  color: white;
 }
 
 .todo-list {
@@ -60,7 +80,14 @@ button {
 }
 
 .todo-list li:first-child {
-  margin-top: 2rem;
+  margin-top: 1rem;
+}
+
+.completed {
+  color: #999999;
+  font-style: oblique;
+  text-decoration: line-through;
+  text-decoration-color: #000;
 }
 
 .message {

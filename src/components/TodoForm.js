@@ -28,13 +28,10 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        updateInput: (val) => dispatch(updateInput(val)) 
-    }
-}
-
 export default connect(
     mapStateToProps,
-    mapDispatchToProps
+    { 
+        updateInput,
+        saveTodo
+    }
 )(TodoForm)
