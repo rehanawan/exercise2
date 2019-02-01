@@ -3,6 +3,7 @@ export const INPUT_UPDATED = 'INPUT_UPDATE';
 export const TODOS_LOAD = 'TODOS_LOAD';
 export const TODO_ADD = 'TODO_ADD';
 export const TODO_REPLACE = 'TODO_REPLACE';
+export const TODO_DELETE = 'TODO_DELETE'
 export const MESSAGE_SHOW = 'MESSAGE_SHOW';
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
 
@@ -19,4 +20,5 @@ export const filterTodos = (filter) => ({ type: SET_VISIBILITY_FILTER, payload: 
 export const loadTodos = (todos) => ({type: TODOS_LOAD, payload: todos})
 export const addTodo = (todo) => ({type: TODO_ADD, payload: todo})
 export const replaceTodo = (todo) => ({type: TODO_REPLACE, payload: todo})
+export const deleteTod = (id) => ({type: TODO_DELETE, id:id})
 export const showMessage = (msg) => ({ type: MESSAGE_SHOW, payload: msg })

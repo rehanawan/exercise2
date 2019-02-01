@@ -15,6 +15,8 @@ export const createTodo = (newTodo) => {
     .then(resp => resp.json())
 }
 
+
+
 export const updateTodo = (todo) => {
     return fetch(`http://localhost:8686/todos/${todo.id}`, {
         method: 'PUT',
@@ -25,4 +27,13 @@ export const updateTodo = (todo) => {
         body: JSON.stringify(todo)
     })
     .then(resp => resp.json())
+}
+
+export const deleteTodo = (todo) => {
+    console.log("hey im here ")
+    return fetch(`http://localhost:8686/todos/${todo.id}`, {
+        method: 'DELETE',
+
+    })
+        .then(resp => resp.json())
 }
