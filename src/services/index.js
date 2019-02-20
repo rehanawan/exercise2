@@ -1,10 +1,14 @@
-export const getTodos = () => {
-    return fetch('http://localhost:8686/todos')
-        .then(resp => resp.json())
+export const getTodos = (dateF) => {
+    return fetch('http://localhost:8686/'+dateF)
+        .then(resp => {if (!resp.ok){
+            return []
+        }
+        //console.log(resp);
+        return resp.json() })
 }
 
 export const createTodo = (newTodo) => {
-    return fetch('http://localhost:8686/todos', {
+    return fetch(`http://localhost:8686/${newTodo.date}/`, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -18,7 +22,7 @@ export const createTodo = (newTodo) => {
 
 
 export const updateTodo = (todo) => {
-    return fetch(`http://localhost:8686/todos/${todo.id}`, {
+    return fetch(`http://localhost:8686/${todo.date}/${todo.id}`, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json',
@@ -31,7 +35,7 @@ export const updateTodo = (todo) => {
 
 export const deleteTodo = (todo) => {
     console.log("hey im here ")
-    return fetch(`http://localhost:8686/todos/${todo.id}`, {
+    return fetch(`http://localhost:8686/${todo.date}/${todo.id}`, {
         method: 'DELETE',
 
     })

@@ -4,10 +4,13 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types'
 import { VISIBILITY_FILTERS } from '../actions';
 
+
+
+
 const TodoItem = (props) => (
     <li>
-        <p onClick={() => props.toggleTodo(props.id)}
-            className={props.isComplete ? "task completed" : "task"}>{props.name}</p>
+        <p onClick={() => {props.toggleTodo(props.id); }}
+            className={props.completed ? "task completed" : "task"}>{props.task}  </p><p>Tag : {props.tag}  |  Date: {props.date}</p>
         <button onClick = { (e) => {
                 e.preventDefault();
                 props.deleteTodos(props.id)}
@@ -18,8 +21,13 @@ const TodoItem = (props) => (
 
 class TodoList extends Component {
     componentDidMount() {
-        this.props.fetchTodos();
+        this.props.fetchTodos(this.props.dateFilter);
     }
+
+componentWillUpdate(nextProps, nextState, nextContext) {
+        if (nextProps.dateFilter !== this.props.dateFilter)
+        {this.props.fetchTodos(nextProps.dateFilter);}
+}
 
     filterTasks = (tasks, filterOption) => {
         const filtered = this.props.todos.filter(task => {
@@ -27,11 +35,11 @@ class TodoList extends Component {
                 return task;
             }
             if (filterOption === VISIBILITY_FILTERS.SHOW_ACTIVE 
-                && task.isComplete === false) {
+                && task.completed === false) {
                 return task;
             }
             if (filterOption === VISIBILITY_FILTERS.SHOW_COMPLETED 
-                && task.isComplete === true) {
+                && task.completed === true) {
                 return task;
             }
             return null;
@@ -61,7 +69,7 @@ class TodoList extends Component {
                 </ul>
             </div>
         )
-    } 
+    }
 }
 
 //  prop types
