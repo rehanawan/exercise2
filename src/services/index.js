@@ -1,11 +1,13 @@
 export const getTodos = (dateF) => {
-    return fetch('http://localhost:8686/'+dateF)
-        .then(resp => {if (!resp.ok){
-            return []
-        }
-        //console.log(resp);
-        return resp.json() })
-}
+    return fetch('http://localhost:8686/' + dateF)
+        .then(resp => {
+            if (!resp.ok) {
+                return []
+            }
+            //console.log(resp);
+            return resp.json()
+        })
+};
 
 export const createTodo = (newTodo) => {
     return fetch(`http://localhost:8686/${newTodo.date}/`, {
@@ -16,9 +18,8 @@ export const createTodo = (newTodo) => {
         },
         body: JSON.stringify(newTodo)
     })
-    .then(resp => resp.json())
-}
-
+        .then(resp => resp.json())
+};
 
 
 export const updateTodo = (todo) => {
@@ -30,14 +31,14 @@ export const updateTodo = (todo) => {
         },
         body: JSON.stringify(todo)
     })
-    .then(resp => resp.json())
-}
+        .then(resp => resp.json())
+};
 
 export const deleteTodo = (todo) => {
-    console.log("hey im here ")
+    console.log("hey im here ");
     return fetch(`http://localhost:8686/${todo.date}/${todo.id}`, {
         method: 'DELETE',
 
     })
         .then(resp => resp.json())
-}
+};

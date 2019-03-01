@@ -4,7 +4,7 @@
       "task": "try to skip needle work",
       "date": "2018-1-1",
       "tag": "#important",
-      "completed": false,
+      "completed": true,
       "id": "abd2fd46-9e8a-40d6-bb8b-2377799e37f2"
     },
     {
@@ -25,7 +25,7 @@
       "task": "skip crashing adults",
       "date": "2018-1-1",
       "tag": "#important",
-      "completed": false,
+      "completed": true,
       "id": "2266c572-fb6c-40db-8cdc-21e97682a84d"
     },
     {
@@ -48,7 +48,7 @@
       "task": "pretend to sell knife",
       "date": "2018-1-2",
       "tag": "#important",
-      "completed": false,
+      "completed": true,
       "id": "e3b4ba1f-5894-4b2f-86be-88c55ba0ce0f"
     },
     {
@@ -62,14 +62,14 @@
       "task": "make Italian",
       "date": "2018-1-2",
       "tag": "#misc",
-      "completed": false,
+      "completed": true,
       "id": "e4aee76c-b89c-4491-9e86-2b333e314c88"
     },
     {
       "task": "do bird",
       "date": "2018-1-2",
       "tag": "#important",
-      "completed": false,
+      "completed": true,
       "id": "640cf341-b6c5-4cb8-9208-61cb12434917"
     },
     {
@@ -83,7 +83,7 @@
       "task": "buy charges",
       "date": "2018-1-2",
       "tag": "#misc",
-      "completed": false,
+      "completed": true,
       "id": "7f415089-33ea-44fe-b79e-c25dd6227200"
     }
   ],
@@ -3262,13 +3262,6 @@
       "tag": "#important",
       "completed": true,
       "id": "779ca82a-b2b3-408a-bda3-3cda688b46bc"
-    },
-    {
-      "task": "pretend to fix fines",
-      "date": "2018-3-16",
-      "tag": "#family",
-      "completed": false,
-      "id": "e0dfd74e-4500-4ef4-9d2c-7daf9c53cab9"
     },
     {
       "task": "skip throwing milk",
@@ -16460,7 +16453,7 @@
       "task": "skip tweeting needle work",
       "date": "2019-1-10",
       "tag": "#misc",
-      "completed": false,
+      "completed": true,
       "id": "91cb7f9a-bdd4-4c25-a768-d60dd39c598a"
     },
     {
@@ -16548,7 +16541,7 @@
       "task": "try to crash bird",
       "date": "2019-1-12",
       "tag": "#personal",
-      "completed": true,
+      "completed": false,
       "id": "31798261-6e13-475e-8f37-79b0a3e012ce"
     },
     {
@@ -16646,13 +16639,6 @@
     }
   ],
   "2019-1-14": [
-    {
-      "task": "make fines",
-      "date": "2019-1-14",
-      "tag": "#family",
-      "completed": true,
-      "id": "4adc9426-60ef-4af0-836c-b2f1796337fb"
-    },
     {
       "task": "clean adults",
       "date": "2019-1-14",
